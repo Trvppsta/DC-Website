@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DC-Website</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,sans-serif;background:#f5f5f5;color:#222;line-height:1.6;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+header{background:#222;color:#fff;padding:25px 0;text-align:center;}
+header h1{font-size:2.2em;}
+nav{margin-top:10px;}
+nav a{margin:0 18px;font-weight:bold;transition:.3s;}
+nav a:hover{color:#f39c12;}
+main{max-width:1400px;margin:50px auto;padding:0 25px;}
+section{margin-bottom:70px;}
+h2{margin-bottom:25px;font-size:2em;text-align:center;}
+.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
+.gallery.show{opacity:1;transform:translateY(0);}
+.gallery img{width:300px;border-radius:12px;transition:transform .4s, box-shadow .4s;}
+.gallery img:hover{transform:scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.3);cursor:pointer;}
+button{display:block;margin:25px auto;padding:14px 28px;background:#222;color:#fff;border:none;border-radius:10px;font-size:1em;cursor:pointer;transition:.4s, transform .2s;}
+button:hover{background:#f39c12;transform:scale(1.05);}
+footer{background:#222;color:#fff;text-align:center;padding:18px 0;position:relative;width:100%;}
+@media(max-width:768px){.gallery img{width:90%;}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>DC-Website</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<main>
+<section id="about">
+<h2>About</h2>
+<p>Welcome to DC-Website—a clean, ultra HD portfolio-style site showcasing projects, creative work, and a DC-inspired gallery. Fully responsive and smooth animations included.</p>
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery" id="gallery-container">
+<img src="https://picsum.photos/id/1015/600/400" alt="DC Image 1">
+<img src="https://picsum.photos/id/1016/600/400" alt="DC Image 2">
+<img src="https://picsum.photos/id/1020/600/400" alt="DC Image 3">
+<img src="https://picsum.photos/id/1024/600/400" alt="DC Image 4">
+<img src="https://picsum.photos/id/1027/600/400" alt="DC Image 5">
+<img src="https://picsum.photos/id/1031/600/400" alt="DC Image 6">
+</div>
+<button onclick="showMessage()">Click Me</button>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Text or call <strong>318-210-7714</strong> for inquiries.</p>
+</section>
+</main>
+
+<footer>
+<p>© 2025 DC-Website. All rights reserved.</p>
+</footer>
+
+<script>
+function showMessage(){alert("DC-Website is live and ultra HD!");}
+
+// Gallery fade-in on scroll
+window.addEventListener('scroll', function(){
+  const gallery = document.getElementById('gallery-container');
+  const rect = gallery.getBoundingClientRect();
+  if(rect.top < window.innerHeight - 50){gallery.classList.add('show');}
+});
+console.log("DC-Website loaded with ultra HD animations!");
+</script>
+
+</body>
+</html>
