@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Finished Website</title>
+  <style>
+    /* ===== CSS ===== */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+    }
+    main {
+      padding: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Finished Website</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <p>This is the final deploy-ready website! Everything is in one file.</p>
+
+    <div class="gallery">
+      <img src="images/pic1.jpg" alt="Image 1">
+      <img src="images/pic2.jpg" alt="Image 2">
+      <img src="images/pic3.jpg" alt="Image 3">
+    </div>
+
+    <button onclick="showMessage()">Click Me</button>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made by Me © 2025</p>
+  </footer>
+
+  <script>
+    // ===== JS =====
+    function showMessage() {
+      alert("Site is live and fully functional!");
+    }
+    console.log("Finished website loaded successfully!");
+  </script>
+
+</body>
+</html>
